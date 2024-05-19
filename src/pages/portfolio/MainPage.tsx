@@ -1,6 +1,7 @@
 import NavBar from "./NavBar";
 import Hero from "./Hero";
 import Technology from "./Technology";
+import Education from "./Education";
 
 const MainPage = () => {
   return (
@@ -8,6 +9,7 @@ const MainPage = () => {
       <NavBar />
       <Hero />
       <Technology />
+      <Education />
     </>
   );
 };
