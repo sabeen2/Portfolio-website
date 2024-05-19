@@ -9,7 +9,7 @@ const NavBar: React.FC = () => {
   return (
     <>
       <div>
-        <nav className="bg-white border-b-[1px] border-gray-200 py-[18px] flex justify-between  flex-grow  flex-shrink ">
+        <nav className="bg-white sticky border-b-[1px] border-gray-200 py-[18px] flex justify-between  flex-grow  flex-shrink ">
           <div className="flex flex-row sm:gap-x-6  gap-x-4 sm:ml-[4rem] ml-[10px] text-[#4b55630] font-light text-gray-700  flex-shrink ">
             <div className=" hover:scale-[1.05] hover:text-black">
               {" "}
