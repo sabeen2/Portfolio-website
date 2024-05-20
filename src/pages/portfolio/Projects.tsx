@@ -48,7 +48,7 @@ const ProjectsSection = () => (
         {projects.map((project, index) => (
           <div
             key={index}
-            className="rounded-lg overflow-hidden shadow-md shadow-gray-400  border border-gray-300 pb-2  "
+            className="rounded-lg overflow-hidden shadow-md shadow-gray-400  border border-gray-300 pb-2 hover:scale-[1.03] duration-[400ms] "
           >
             <img
               alt={project.altText}
@@ -68,7 +68,7 @@ const ProjectsSection = () => (
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-gray-900 text-white rounded-lg"
+                    className="px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-700  duration-300 flex-shrink text-sm  "
                   >
                     View Live Deployment
                   </a>
@@ -78,7 +78,7 @@ const ProjectsSection = () => (
                     href={project.sourceLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-gray-900 text-white rounded-lg"
+                    className="px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-700  duration-300 flex-shrink"
                   >
                     View Source Code
                   </a>
