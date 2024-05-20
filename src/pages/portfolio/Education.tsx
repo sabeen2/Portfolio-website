@@ -9,17 +9,17 @@ const Education = () => {
             </h2>
           </div>
           <div>
-            <div className="bg-white px-6 rounded-xl py-12 space-y-10 border border-gray-100">
+            <div className="bg-white px-6 rounded-xl  sm:py-12 py-8  space-y-10 border border-gray-100">
               <p>
-                <h1 className="font-bold text-3xl mb-4">
+                <h1 className="font-bold sm:text-3xl text-xl mb-4">
                   Bachelors in Computer Application (BCA)
                 </h1>
-                <p className="text-xl">
+                <p className="sm:text-xl text-lg">
                   Asian School of Management and Technology
                 </p>
               </p>
               <p>
-                <p className="text-xl text-gray-600 dark:text-gray-400">
+                <p className="sm:text-xl text-lg text-gray-600 dark:text-gray-400">
                   2019 - 2024
                 </p>
               </p>
