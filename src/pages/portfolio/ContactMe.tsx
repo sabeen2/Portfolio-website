@@ -1,14 +1,34 @@
-import { message } from "antd";
-import React from "react";
-import { JSX } from "react/jsx-runtime";
-import { Form, Input, Button } from "antd";
+import { useState } from "react";
+import { message, Form, Input, Button } from "antd";
 const { TextArea } = Input;
 
 const ContactMe = () => {
   const [form] = Form.useForm();
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (values: any) => {
-    console.log("Form Values:", values);
+  const handleSubmit = async (values: any) => {
+    try {
+      setLoading(true);
+
+      const response = await fetch("https://formspree.io/f/xjvndvba", {
+        method: "POST",
+        body: JSON.stringify(values),
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (response.ok) {
+        message.success("Message Sent");
+      } else {
+        message.error("Failed sending Message");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      message.error("Failed sending Message");
+    } finally {
+    }
   };
 
   return (
@@ -25,33 +45,7 @@ const ContactMe = () => {
             </p>
           </div>
         </div>
-        <div className="flex items-center space-x-4">
-          <div className="flex items-center space-x-2 rounded-md bg-gray-100 px-4 py-2 text-sm font-medium dark:bg-gray-800">
-            <MailboxIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
-            <span id="email">sabeenpandey2@gmail.com</span>
-          </div>
-          <button
-            className="bg-black text-white py-1 px-2 rounded-lg  text-sm hover:scale-[1.02] hover:bg-gray-800"
-            onClick={() => {
-              navigator.clipboard.writeText("sabenpandey2@gmail.com").then(
-                function () {
-                  message.success("Copied to Clipbord");
-                },
-                function () {
-                  message.error("Could not copy text for some reason");
-                }
-              );
-            }}
-          >
-            Copy Email
-          </button>
-        </div>
-
         <div className="mx-auto  text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-          <p className="hidden">
-            Feel free to reach out to me with any questions or inquiries. I'll
-            get back to you as soon as possible.
-          </p>
           <div className="mx-auto w-full max-w-sm ">
             <Form
               form={form}
@@ -103,9 +97,10 @@ const ContactMe = () => {
                   style={{ background: "black" }}
                   type="primary"
                   htmlType="submit"
-                  className="w-full hover:scale-[1.04] duration-200 "
+                  className="w-full hover:scale-[1.04] duration-200"
+                  loading={loading}
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </Button>
               </Form.Item>
             </Form>
@@ -117,27 +112,3 @@ const ContactMe = () => {
 };
 
 export default ContactMe;
-
-function MailboxIcon(
-  props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
-) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M22 17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9.5C2 7 4 5 6.5 5H18c2.2 0 4 1.8 4 4v8Z" />
-      <polyline points="15,9 18,9 18,11" />
-      <path d="M6.5 5C9 5 11 7 11 9.5V17a2 2 0 0 1-2 2v0" />
-      <line x1="6" x2="7" y1="10" y2="10" />
-    </svg>
-  );
-}
