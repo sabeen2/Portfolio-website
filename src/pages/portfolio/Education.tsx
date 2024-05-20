@@ -1,8 +1,8 @@
 const Education = () => {
   return (
     <div>
-      <section className="w-full py-12 md:py-20 bg-gray-100 dark:bg-gray-800 ">
-        <div className="container  mx-auto grid items-center justify-center gap-4 px-4 md:px-6 lg:gap-16 ">
+      <section className="w-full py-12 md:py-14  dark:bg-gray-800 ">
+        <div className="container  mx-auto grid items-center justify-center gap-4 px-4 md:px-6 lg:gap-8 ">
           <div className="space-y-3">
             <h2 className=" text-center text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
               Education

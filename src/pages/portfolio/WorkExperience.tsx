@@ -1,16 +1,16 @@
 const workExperiences = [
   {
-    date: "Nov 2023 - Present",
-    title: "FrontEnd Engineer at Hobes Technology.",
+    date: "Nov 2023 - Jan 2024",
+    title: "Frontend Engineering Intern at Hobes Technology.",
     description:
-      "Developed and maintained responsive user interfaces using React, Tailwind CSS, AntD, Typescript.",
+      "Gained experience in frontend web development, including integrating RESTful APIs , building reusable components and creating responsive UI.",
   },
-  // {
-  //   date: "May 2021 - June 2022",
-  //   title: "Frontend Developer at XYZ Corp.",
-  //   description:
-  //     "Developed and maintained responsive user interfaces using React and Tailwind CSS.",
-  // },
+  {
+    date: "Jan 2024 - Present",
+    title: "Frontend Engineer at Hobes Technology.",
+    description:
+      "Developed and maintained responsive user interfaces using React, Typescript, Tailwind CSS, AntD, React Query and Context API",
+  },
   // {
   //   date: "June 2020 - May 2021",
   //   title: "Intern at ABC Tech.",
@@ -20,7 +20,7 @@ const workExperiences = [
 ];
 
 const WorkExperience = () => (
-  <section className="w-full py-12 md:py-24 lg:py-20">
+  <section className="w-full py-12 md:py-24 lg:py-20 bg-white">
     <div className="container  mx-auto space-y-12 px-4 md:px-6">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
         <div className="space-y-2">
