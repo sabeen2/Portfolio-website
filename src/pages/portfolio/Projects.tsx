@@ -1,6 +1,8 @@
 import studybest from "../../assets/stuybest.png";
 import kicks from "../../assets/kicks.png";
 import bookRental from "../../assets/bookRental.png";
+import { Image } from "antd";
+
 const projects = [
   {
     title: "Study Best Feed",
@@ -48,9 +50,9 @@ const ProjectsSection = () => (
         {projects.map((project, index) => (
           <div
             key={index}
-            className="rounded-lg overflow-hidden shadow-md shadow-gray-400  border border-gray-300 pb-2 hover:scale-[1.03] duration-[400ms] "
+            className="rounded-lg overflow-hidden shadow-md shadow-gray-400  border border-gray-300 pb-2 hover:scale-[1.02] duration-[400ms] "
           >
-            <img
+            <Image
               alt={project.altText}
               className="w-full aspect-video object-cover border-b-[1px] border-gray-200 rounded-lg border border-t-0 border-x-0"
               height="310"

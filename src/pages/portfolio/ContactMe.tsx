@@ -4,13 +4,11 @@ const { TextArea } = Input;
 
 const ContactMe = () => {
   const [form] = Form.useForm();
-  const [loading, setLoading] = useState(false); // State to manage loading state of the button
-
+  const [loading, setLoading] = useState(false);
   const handleSubmit = async (values: any) => {
     try {
-      setLoading(true); // Set loading state to true while sending message
+      setLoading(true);
 
-      // Make a POST request to the Formspree endpoint
       const response = await fetch("https://formspree.io/f/xjvndvba", {
         method: "POST",
         body: JSON.stringify(values),
@@ -22,15 +20,15 @@ const ContactMe = () => {
 
       if (response.ok) {
         message.success("Message Sent");
+        form.resetFields();
       } else {
         message.error("Failed sending Message");
       }
     } catch (error) {
       console.error("Error:", error);
-      // Show error message if there's an exception
       message.error("Failed sending Message");
     } finally {
-      setLoading(false); // Set loading state to false when request is completed
+      setLoading(false);
     }
   };
 
@@ -101,7 +99,7 @@ const ContactMe = () => {
                   type="primary"
                   htmlType="submit"
                   className="w-full hover:scale-[1.04] duration-200"
-                  loading={loading} // Set loading state of the button
+                  loading={loading}
                 >
                   {loading ? "Sending..." : "Send Message"}
                 </Button>
