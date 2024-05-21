@@ -15,7 +15,7 @@ const techStack = [
 
 const Technology = () => {
   return (
-    <div className="">
+    <div id="skills">
       <section className="w-full py-12 md:py-20 bg-white dark:bg-gray-800 ">
         <div className="container mx-auto grid items-center justify-center gap-4 px-4 md:px-6 lg:gap-16">
           <div className="space-y-3">

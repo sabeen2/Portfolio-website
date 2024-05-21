@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { message, Form, Input, Button } from "antd";
 const { TextArea } = Input;
+import { MailOutlined } from "@ant-design/icons";
 
 const ContactMe = () => {
   const [form] = Form.useForm();
@@ -33,8 +34,31 @@ const ContactMe = () => {
   };
 
   return (
-    <div>
-      <section className="flex flex-col items-center justify-center gap-4 py-20 bg-white gap-y-8">
+    <div id="contact">
+      <section className="flex flex-col items-center justify-center gap-4 py-16 bg-white gap-y-8">
+        <div className="flex items-center space-x-4 mb-6">
+          <div className="flex items-center space-x-2 rounded-xl bg-gray-100 px-4 py-2 text-sm font-medium dark:bg-gray-800">
+            <MailOutlined className=" sm:text-2xl text-lg text-gray-500 dark:text-gray-400" />
+            <span className="sm:text-xl text-lg font-light">
+              sabeenpandey2@gmail.com
+            </span>
+          </div>
+          <button
+            onClick={() =>
+              navigator.clipboard.writeText("sabeenpandey2@gmail.com").then(
+                function () {
+                  message.success("Copied to the clipboard!");
+                },
+                function (err) {
+                  message.error(" Could not copy email: ", err);
+                }
+              )
+            }
+            className=" sm:text-md  border border-gray-400 px-2 py-1 rounded-lg bg-black text-white hover:bg-gray-800 hover:scale-[1.03] "
+          >
+            Copy Email
+          </button>
+        </div>
         <div className="space-y-2 text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Get in Touch
