@@ -1,8 +1,16 @@
 import React, { useState } from "react";
 import { Drawer } from "antd";
+import { IoMoon } from "react-icons/io5";
+import { IoSunny } from "react-icons/io5";
 
 const NavBar: React.FC = () => {
   const [drawerVisible, setDrawerVisible] = useState(false);
+  const [dark, setDark] = useState(true);
+
+  const darkModeHandler = () => {
+    setDark(!dark);
+    document.body.classList.toggle("dark");
+  };
 
   const showDrawer = () => {
     setDrawerVisible(true);
@@ -70,6 +78,10 @@ const NavBar: React.FC = () => {
             <a {...menuProps} href="#contact">
               Contact Me
             </a>
+
+            <div>
+              <button> </button>
+            </div>
           </div>
 
           <div className="1115:hidden mr-[10px]">
