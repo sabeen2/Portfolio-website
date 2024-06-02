@@ -2,10 +2,10 @@ import React from "react";
 
 const techStack = [
   { name: "React", icon: ComponentIcon },
-  { name: "Node.js", icon: TreesIcon },
+  { name: "Security Testing", icon: TreesIcon },
   { name: "Ant Design", icon: ArrowRightIcon },
   { name: "TypeScript", icon: TypeIcon },
-  { name: "MongoDB", icon: DatabaseIcon },
+  { name: "Prisma", icon: DatabaseIcon },
   { name: "React Query", icon: TriangleIcon },
   { name: "Tailwind CSS", icon: WindIcon },
   { name: "Linux", icon: ContainerIcon },

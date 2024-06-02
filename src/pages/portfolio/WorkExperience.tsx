@@ -1,16 +1,17 @@
 const workExperiences = [
   {
-    date: "Nov 2023 - Jan 2024",
-    title: "Frontend Engineering Intern at Hobes Technology.",
-    description:
-      "Gained experience in frontend web development, including integrating RESTful APIs , building reusable components and creating responsive UI.",
-  },
-  {
     date: "Jan 2024 - Present",
     title: "Frontend Engineer at Hobes Technology.",
     description:
       "Developed and maintained responsive user interfaces using React, Typescript, Tailwind CSS, AntD, React Query and Context API",
   },
+  {
+    date: "Nov 2023 - Jan 2024",
+    title: "Frontend Engineering Intern at Hobes Technology.",
+    description:
+      "Gained experience in frontend web development, including integrating RESTful APIs , building reusable components and creating responsive UI.",
+  },
+
   // {
   //   date: "June 2020 - May 2021",
   //   title: "Intern at ABC Tech.",

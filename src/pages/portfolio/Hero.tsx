@@ -12,11 +12,12 @@ const Hero = () => {
                   Sabin Pandey
                 </h1>
                 <h2 className="text-xl font-medium text-gray-500 dark:text-gray-400">
-                  Full Stack Developer
+                  Frontend Engineer
                 </h2>
                 <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                  I am a passionate full stack developer with expertise in
-                  building modern, scalable, and user-friendly web applications.
+                  I am a passionate frontend developer with expertise in
+                  building modern, optimized, and user-friendly web
+                  applications.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row items-center">

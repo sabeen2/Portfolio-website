@@ -13,9 +13,9 @@ const MainPage = () => {
       <NavBar />
       <Hero />
       <Technology />
-      <Education />
       <WorkExperience />
       <ProjectsSection />
+      <Education />
       <ContactMe />
     </>
   );
