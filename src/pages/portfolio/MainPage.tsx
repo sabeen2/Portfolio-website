@@ -1,10 +1,10 @@
 import NavBar from "./NavBar";
 import Hero from "./Hero";
-import Technology from "./Technology";
 import Education from "./Education";
 import WorkExperience from "./WorkExperience";
 import ProjectsSection from "./Projects";
 import ContactMe from "./ContactMe";
+import TechStack from "./TechStack";
 // import NavMenu from "./NavMenu";
 
 const MainPage = () => {
@@ -12,7 +12,7 @@ const MainPage = () => {
     <>
       <NavBar />
       <Hero />
-      <Technology />
+      <TechStack />
       <WorkExperience />
       <ProjectsSection />
       <Education />

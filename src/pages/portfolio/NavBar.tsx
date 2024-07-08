@@ -63,8 +63,8 @@ const NavBar: React.FC = () => {
             <a {...menuProps} href="#">
               Home
             </a>
-            <a {...menuProps} href="#skills">
-              Skills & Technologies
+            <a {...menuProps} href="#techstack">
+              Tech Stack
             </a>
             <a {...menuProps} href="#work">
               Work Experience
@@ -115,9 +115,9 @@ const NavBar: React.FC = () => {
           <a
             {...drawerProps}
             onClick={() => setDrawerVisible(false)}
-            href="#skills"
+            href="#techstack"
           >
-            Skills & Technologies
+            Tech Stack
           </a>
           <a
             {...drawerProps}

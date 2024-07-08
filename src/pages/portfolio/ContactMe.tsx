@@ -6,7 +6,15 @@ import { MailOutlined } from "@ant-design/icons";
 const ContactMe = () => {
   const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
-  const handleSubmit = async (values: any) => {
+  /**
+   * Handles the form submission.
+   *
+   * @param {Record<string, string>} values - The form values.
+   * @returns {Promise<void>}
+   */
+  const handleSubmit = async (
+    values: Record<string, string>
+  ): Promise<void> => {
     try {
       setLoading(true);
 
@@ -25,7 +33,7 @@ const ContactMe = () => {
       } else {
         message.error("Failed sending Message");
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error:", error);
       message.error("Failed sending Message");
     } finally {
@@ -35,8 +43,8 @@ const ContactMe = () => {
 
   return (
     <div id="contact">
-      <section className="flex flex-col items-center justify-center gap-4 py-16 bg-white gap-y-8">
-        <div className="flex items-center space-x-4 mb-6">
+      <section className="flex flex-col items-center justify-center gap-4 py-16 bg-white gap-y-8 mx-4">
+        <div className="flex items-center space-x-3 mb-6">
           <div className="flex items-center space-x-2 rounded-xl bg-gray-100 px-4 py-2 text-sm font-medium dark:bg-gray-800">
             <MailOutlined className=" sm:text-2xl text-lg text-gray-500 dark:text-gray-400" />
             <span className="sm:text-xl text-lg font-light">
@@ -54,7 +62,7 @@ const ContactMe = () => {
                 }
               )
             }
-            className=" sm:text-md  border border-gray-400 px-2 py-1 rounded-lg bg-black text-white hover:bg-gray-800 hover:scale-[1.03] "
+            className=" text-sm md:text-md  border border-gray-400 md:px-2 px-1 py-1 rounded-lg bg-black text-white hover:bg-gray-800 hover:scale-[1.03] "
           >
             Copy Email
           </button>

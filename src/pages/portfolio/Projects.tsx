@@ -1,22 +1,34 @@
 import studybest from "../../assets/stuybest.png";
 import kicks from "../../assets/kicks.png";
 import bookRental from "../../assets/bookRental.png";
+import bhasika from "../../assets/bhasika.png";
+
 import { Image } from "antd";
 
 const projects = [
   {
     title: "Study Best Feed",
     description:
-      "A modern user-friendly platform for students to explore universities, find study destinations, using React, Typescript, Ant Design, Tailwind, Context API and React Query ",
+      "A modern, user-friendly platform for students to explore universities and find study destinations, built with React, TypeScript, Ant Design, Tailwind, Context API, and React Query.",
     imageSrc: studybest,
     altText: "Study Best Feed",
     liveLink: "https://study-best-feed-dev.vercel.app",
     sourceLink: "",
   },
   {
+    title: "Bhasika",
+    description:
+      "Bhaskia is a platform for students to apply for studying abroad and prepare for exams like IELTS, offering guidance, resources, and support throughout the process build on Next JS.",
+    imageSrc: bhasika,
+    altText: "bhasika",
+    liveLink: "https://bhasika.hobes.tech/",
+    // sourceLink: "https://github.com/sabeen2/Book-Rental-System",
+  },
+
+  {
     title: "Snickers Order Management System",
     description:
-      "An Order Management System for snickers using React, Typescript, Ant Design, Tailwind, Context API, React Query and Chart JS ",
+      "An Order Management System for sneakers using React, TypeScript, Ant Design, Tailwind, Context API, React Query, and Chart.js for seamless, efficient, and stylish order processing. ",
     imageSrc: kicks,
     altText: "Kicks",
     liveLink: "https://kicks-sneaker-store.netlify.app",
@@ -25,7 +37,7 @@ const projects = [
   {
     title: "Book Rental System",
     description:
-      "A Book Rental System using React, Typescript, Ant Design, Tailwind, Context API, React Query, Styled Components and Chart JS.",
+      "A Book Rental System using React, TypeScript, Ant Design, Tailwind, Context API, React Query, Styled Components, and Chart.js for efficient, modern, and visually appealing book rentals.",
     imageSrc: bookRental,
     altText: "bookRental",
     liveLink: "https://book-rental-system-ts.netlify.app/",
@@ -47,11 +59,11 @@ const ProjectsSection = () => (
             </p>
           </div>
         </div>
-        <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6  ">
+        <div className="flex flex-wrap justify-center gap-6 ">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="rounded-lg overflow-hidden shadow-md shadow-gray-400  border border-gray-300 pb-2 hover:scale-[1.02] duration-[400ms] "
+              className="w-[480px] rounded-lg overflow-hidden shadow-md shadow-gray-400  border border-gray-300 pb-2 hover:scale-[1.02] duration-[400ms] "
             >
               <Image
                 alt={project.altText}
@@ -81,7 +93,7 @@ const ProjectsSection = () => (
                       href={project.sourceLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-700  duration-300 flex-shrink"
+                      className="md:px-4 px-2 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-700  duration-300 flex-shrink"
                     >
                       View Source Code
                     </a>
