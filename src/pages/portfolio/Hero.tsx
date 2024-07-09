@@ -24,7 +24,7 @@ const Hero = () => {
                 <button
                   onClick={() =>
                     window.open(
-                      "https://drive.google.com/file/d/1TnWOxa51LsapQS9mZ1zyio-hh-UyxQyZ/view",
+                      "https://drive.google.com/file/d/1hou2h95jgFJwYdRGzJe0W7EUkTgQzt3s/view?usp=sharing",
                       "_blank"
                     )
                   }
