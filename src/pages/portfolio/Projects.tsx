@@ -21,7 +21,7 @@ const projects = [
       "Bhaskia is a platform for students to apply for studying abroad and prepare for exams like IELTS, offering guidance, resources, and support throughout the process build on Next JS.",
     imageSrc: bhasika,
     altText: "bhasika",
-    liveLink: "https://bhasika.hobes.tech/",
+    liveLink: "https://bhasika.hobes.tech/explore-services",
     // sourceLink: "https://github.com/sabeen2/Book-Rental-System",
   },
 
