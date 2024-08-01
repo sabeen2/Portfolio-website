@@ -2,6 +2,7 @@ import studybest from "../../assets/stuybest.png";
 import kicks from "../../assets/kicks.png";
 import bookRental from "../../assets/bookRental.png";
 import bhasika from "../../assets/bhasika.png";
+import trello from "../../assets/image.png";
 
 import { Image } from "antd";
 
@@ -42,6 +43,15 @@ const projects = [
     altText: "bookRental",
     liveLink: "https://book-rental-system-ts.netlify.app/",
     sourceLink: "https://github.com/sabeen2/Book-Rental-System",
+  },
+  {
+    title: "Mini Trello Clone (Full Stack)",
+    description:
+      "A mini trello clone, where you can signup ,login, create update delete tasks. You can also change status of card by drag and drop. Developed with typescript, Nextjs and Express, MongoDB",
+    imageSrc: trello,
+    altText: "trello",
+    liveLink: "https://sabin-trello-clone.vercel.app/",
+    sourceLink: "https://github.com/sabeen2/Trello-Frontend",
   },
 ];
 
